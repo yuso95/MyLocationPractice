@@ -1,0 +1,6 @@
+framework module Pods_LocationPractice {
+  umbrella header "Pods-LocationPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
