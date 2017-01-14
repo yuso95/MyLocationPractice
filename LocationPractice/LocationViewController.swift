@@ -12,6 +12,7 @@ class LocationViewController: UIViewController {
     
     // Variables/Constants/Computed Properties
     
+    var weather = Weather()
     // Outlets
     
     @IBOutlet private weak var dateLBL: UILabel!
@@ -24,10 +25,19 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        weather.downlaodWheatherData {
+            
+            updateUI()
+        }
     }
 
-
+    private func updateUI() {
+        
+        dateLBL.text = weather.date
+        cityLBL.text = weather.cityName
+        currentWeatherTypeLBL.text = weather.weatherType
+        currentTempLBL.text = "\(weather.currentTemp)"
+    }
 
 }
 

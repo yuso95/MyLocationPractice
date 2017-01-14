@@ -15,3 +15,4 @@ let APPID_URL = "appid="
 let API_KEY = "01b71ce9d42eae12344cd64ff899d22c"
 
 let CURRENTWEAHTER_URL = "\(BASE_URL)\(APPID_URL)\(API_KEY)"
+

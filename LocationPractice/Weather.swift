@@ -14,6 +14,7 @@ class Weather {
     private var _date: String!
     private var _cityName: String!
     private var _weatherType: String!
+    private var _currentTemp: Double!
     
     var date: String {
         
@@ -21,6 +22,13 @@ class Weather {
             
             return ""
         }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        
+        let currentDate = dateFormatter.string(from: Date())
+        _date = "Today, \(currentDate)"
         
         return _date
     }
@@ -45,6 +53,58 @@ class Weather {
         return _weatherType
     }
     
+    var currentTemp: Double {
+        
+        if _currentTemp == nil {
+            
+            return 0.0
+        }
+        
+        return _currentTemp
+    }
+    
     // Amalofire work here 
+    
+    func downlaodWheatherData(completed: DownloadComplete) {
+        
+        Alamofire.request(CURRENTWEAHTER_URL).responseJSON { (response) in
+            
+            if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                
+                if let name = dict["name"] as? String {
+                    
+                    self._cityName = name
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
+                    
+                    if let main = weather[0]["main"] as? String {
+                        
+                        let weahterType = main.capitalized
+                        
+                        self._weatherType = weahterType
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String, Double> {
+                    
+                    if let temp = main["temp"] {
+                        
+                        let kelvinToFarhenheitPreDivision = (temp * (9/5) - 459.67)
+                        let kelvinToFarhenheit = Double(round(10 * kelvinToFarhenheitPreDivision / 10))
+                        
+                        self._currentTemp = kelvinToFarhenheit
+                    }
+                }
+            }
+            
+            print("Today is: \(self.date)")
+            print("city name: \(self.cityName)")
+            print("weather type: \(self.weatherType)")
+            print("current weather temp: \(self.currentTemp)")
+        }
+        
+        completed()
+    }
     
 }
