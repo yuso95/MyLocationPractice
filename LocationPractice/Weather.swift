@@ -14,7 +14,7 @@ class Weather {
     private var _date: String!
     private var _cityName: String!
     private var _weatherType: String!
-    private var _currentTemp: Double!
+    private var _currentTemp: String!
     
     var date: String {
         
@@ -53,17 +53,17 @@ class Weather {
         return _weatherType
     }
     
-    var currentTemp: Double {
+    var currentTemp: String {
         
         if _currentTemp == nil {
             
-            return 0.0
+            return ""
         }
         
         return _currentTemp
     }
     
-    // Amalofire work here 
+    // Amalofire work here
     
     func downlaodWheatherData(completed: DownloadComplete) {
         
@@ -93,15 +93,15 @@ class Weather {
                         let kelvinToFarhenheitPreDivision = (temp * (9/5) - 459.67)
                         let kelvinToFarhenheit = Double(round(10 * kelvinToFarhenheitPreDivision / 10))
                         
-                        self._currentTemp = kelvinToFarhenheit
+                        self._currentTemp = "\(kelvinToFarhenheit)"
                     }
                 }
             }
             
-            print("Today is: \(self.date)")
-            print("city name: \(self.cityName)")
-            print("weather type: \(self.weatherType)")
-            print("current weather temp: \(self.currentTemp)")
+            //            print("Today is: \(self.date)")
+            //            print("city name: \(self.cityName)")
+            //            print("weather type: \(self.weatherType)")
+            //            print("current weather temp: \(self.currentTemp)")
         }
         
         completed()

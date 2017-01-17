@@ -10,6 +10,8 @@
 		D45D5A71BAACAA71F276D82F /* Pods_LocationPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20442B01A450FD55C65DE4AE /* Pods_LocationPractice.framework */; };
 		D55458641E287A400024376E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55458631E287A400024376E /* Constants.swift */; };
 		D55458661E287B330024376E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55458651E287B330024376E /* Weather.swift */; };
+		D566B7AA1E2E982E000F2595 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566B7A91E2E982E000F2595 /* ForecastCell.swift */; };
+		D5AFBCA71E2E887C00223300 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AFBCA61E2E887C00223300 /* Forecast.swift */; };
 		D5D6B8211E2871280009B50C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6B8201E2871280009B50C /* AppDelegate.swift */; };
 		D5D6B8231E2871280009B50C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6B8221E2871280009B50C /* LocationViewController.swift */; };
 		D5D6B8261E2871280009B50C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D6B8241E2871280009B50C /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		A7769CBBFA8DE8626027834D /* Pods-LocationPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationPractice/Pods-LocationPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		D55458631E287A400024376E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D55458651E287B330024376E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		D566B7A91E2E982E000F2595 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		D5AFBCA61E2E887C00223300 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		D5D6B81D1E2871280009B50C /* LocationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D6B8201E2871280009B50C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D6B8221E2871280009B50C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		D5D6B8341E28714A0009B50C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D566B7A91E2E982E000F2595 /* ForecastCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				D55458631E287A400024376E /* Constants.swift */,
 				D55458651E287B330024376E /* Weather.swift */,
+				D5AFBCA61E2E887C00223300 /* Forecast.swift */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				D5D6B8231E2871280009B50C /* LocationViewController.swift in Sources */,
 				D5D6B8211E2871280009B50C /* AppDelegate.swift in Sources */,
 				D55458641E287A400024376E /* Constants.swift in Sources */,
+				D566B7AA1E2E982E000F2595 /* ForecastCell.swift in Sources */,
+				D5AFBCA71E2E887C00223300 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

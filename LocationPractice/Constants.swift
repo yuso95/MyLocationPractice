@@ -14,5 +14,7 @@ let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q=Boston,ma&"
 let APPID_URL = "appid="
 let API_KEY = "01b71ce9d42eae12344cd64ff899d22c"
 
+let ForecastWeather_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=42.36&lon=-71.06&cnt=10&mode=json&appid=01b71ce9d42eae12344cd64ff899d22c"
+
 let CURRENTWEAHTER_URL = "\(BASE_URL)\(APPID_URL)\(API_KEY)"
 
